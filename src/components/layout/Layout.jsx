@@ -14,7 +14,7 @@ function Layout() {
       {/* Main Content */}
       <div className="ml-64 flex-1 p-4 bg-stone-50 min-h-screen overflow-y-auto">
         
-        <div className="w-full bg-red-300  text-white p-4">
+        <div className="w-full bg-gray-300  text-white p-4">
           <Outlet/>
         </div>
 
