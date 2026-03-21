@@ -10,7 +10,7 @@ function Sidebar2()
 
   
     return(
-        <div className="w-64 h-screen bg-gray border-r p-5">
+        <div className="w-64 h-screen bg-gray-200 border-r p-5">
 
       <div className="flex items-center gap-3 mb-8">
         <div className="bg-blue-400 text-white p-2 rounded-md">

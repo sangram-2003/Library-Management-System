@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 
-const UserBooks = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
+ const UserBooks = () => {
+   const [searchTerm, setSearchTerm] = useState("");
+   const [activeCategory, setActiveCategory] = useState("All");
 
-  const categories = ["All", "Computer Science", "Software Engineering", "Mathematics", "Physics", "Literature"];
+   const categories = ["All", "Computer Science", "Software Engineering", "Mathematics", "Physics", "Literature"];
 
-  const books = [
-    { id: 1, title: "Introduction to Algorithms", author: "Sangram Bauri", year: 2009, category: "Computer Science", stock: 3, color: "bg-purple-600" },
-    { id: 2, title: "Clean Code", author: "Dr.Soumen Mondal", year: 2008, category: "Software Engineering", stock: 2, color: "bg-blue-600",  },
-    { id: 3, title: "Differential calculas", author: "Dr.Debesh Mandi", year: 2015, category: "Mathematics iii", stock: 4, color: "bg-emerald-600" },
-    { id: 4, title: "6th SEM CHOTA", author: "Dr.Tuhin Mohanta", year: 2013, category: "Physics", stock: 1, color: "bg-purple-600" },
-    { id: 5, title: "The linux by", author: "F. Scott Fitzgerald", year: 1925, category: "Literature", stock: 5, color: "bg-orange-600" },
-    { id: 6, title: "Design Patterns", author: "Erich Gamma", year: 1994, category: "Computer Science", stock: 2, color: "bg-teal-600" },
-    { id: 7, title: "Object Oriented Programing", author: "Dr.Soumen Mondal", year: 2002, category: "Computer Science", stock: 4, color: "bg-gray-600" },
-    { id: 8, title: "C PROGRAMING", author: "Master Debesh Mahato", year: 2003, category: "Computer Science", stock: 7, color: "bg-teal-600" },
-  ];
+   const books = [
+     { id: 1, title: "Introduction to Algorithms", author: "Sangram Bauri", year: 2009, category: "Computer Science", stock: 3, color: "bg-red-600" },
+     { id: 2, title: "Clean Code", author: "Dr.Soumen Mondal", year: 2008, category: "Software Engineering", stock: 2, color: "bg-blue-600", status: "Requested" },
+     { id: 3, title: "Differential calculas", author: "Dr.Debesh Mandi", year: 2015, category: "Mathematics iii", stock: 4, color: "bg-emerald-600" },
+     { id: 4, title: "6th SEM CHOTA", author: "Dr.Tuhin Mohanta", year: 2013, category: "Physics", stock: 1, color: "bg-purple-600" },
+     { id: 5, title: "The linuxby", author: "F. Scott Fitzgerald", year: 1925, category: "Literature", stock: 5, color: "bg-orange-600" },
+     { id: 6, title: "Design Patterns", author: "Erich Gamma", year: 1994, category: "Computer Science", stock: 2, color: "bg-teal-600" },
+     { id: 7, title: "Object Oriented Programing", author: "Dr.Soumen Mondal", year: 2002, category: "Computer Science", stock: 4, color: "bg-gray-600" },
+     { id: 8, title: "C PROGRAMING", author: "Master Debesh Mahato", year: 2003, category: "Computer Science", stock: 7, color: "bg-teal-600" },
+   ];
 
-  const filteredBooks = books.filter(book => {
-    const matchesSearch = book.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          book.author.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = activeCategory === "All" || book.category === activeCategory;
-    return matchesSearch && matchesCategory;
-  });
+   const filteredBooks = books.filter(book => {
+    const matchesSearch = book.title.toLowerCase().includes(searcjsxhTerm.toLowerCase()) || 
+                           book.author.toLowerCase().includes(searchTerm.toLowerCase());
+     const matchesCategory = activeCategory === "All" || book.category === activeCategory;
+     return matchesSearch && matchesCategory;
+   });
 
   return (
     <div className="flex min-h-screen bg-gray-50 text-slate-700">
